@@ -61,7 +61,7 @@ while True:
             values[i] = mcp.read_adc(i)
         # Store the set of 8 values in a longer list
         samples[j*8:j*8+8] = values
-        time.sleep(0.5)
+        time.sleep(30)
     for k in range(8):
         tot = sum(samples[k::8])
         n = len(samples[k::8])
@@ -81,13 +81,13 @@ while True:
     if minute >= 45:
         print('push to git...')
         with open("log.txt", "a") as log:
-            log.write("git push:" + logtime + "/n")
+            log.write("git push:" + logtime + "\n")
         os.system("git config user.email = 'jonkatz2@gmail.com'")
         os.system("git config user.name = 'jon'")
         os.system("git add --all >> log.txt")
         os.system("git commit -m 'autocommit " + logtime +"' >> log.txt")
         os.system("git push origin master >> log.txt")
     nowint = int(datetime.datetime.now().strftime("%H%M%S"))
-#    if nowint < 1500:
-#        os.system("sudo reboot")
+    if nowint < 1500:
+        os.system("sudo reboot")
     
