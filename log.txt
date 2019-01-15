@@ -11,3 +11,6 @@ git push:2019-01-15 12:49:17/n[master daf2a65] autocommit 2019-01-15 12:49:17
  2 files changed, 4 insertions(+), 1 deletion(-)
 git push:2019-01-15 12:49:29/n[master 21492ff] autocommit 2019-01-15 12:49:29
  2 files changed, 4 insertions(+), 1 deletion(-)
+Writing to existing file: 2019-01-15.csv
+make plot
+git push:2019-01-15 13:37:32

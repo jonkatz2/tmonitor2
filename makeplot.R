@@ -1,3 +1,4 @@
+setwd('~/tmonitor2')
 options(stringsAsFactors=FALSE)
 today <- as.Date(Sys.time())
 todaysfile <- paste0(today, '.csv')

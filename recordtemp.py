@@ -61,7 +61,7 @@ while True:
             values[i] = mcp.read_adc(i)
         # Store the set of 8 values in a longer list
         samples[j*8:j*8+8] = values
-        time.sleep(30)
+        time.sleep(0.5)
     for k in range(8):
         tot = sum(samples[k::8])
         n = len(samples[k::8])
@@ -78,7 +78,11 @@ while True:
         f.write('{0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, '.format(*avgvalues) + logtime + "\n")
     print(logtime, ": true")
     minute = int(datetime.datetime.now().strftime("%M"))
-    if minute >= 45:
+    if minute >= 35:
+        print('make plot')
+        with open("log.txt", "a") as log:
+            log.write("make plot\n")
+        os.system("R CMD batch makeplot.R")
         print('push to git...')
         with open("log.txt", "a") as log:
             log.write("git push:" + logtime + "\n")
