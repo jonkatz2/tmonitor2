@@ -19,3 +19,9 @@ git push:2019-01-15 13:37:32
 Writing to existing file: 2019-01-15.csv
 make plot
 git push:2019-01-15 13:40:05
+[master 4a43654] autocommit 2019-01-15 13:40:05
+ 5 files changed, 31 insertions(+), 2 deletions(-)
+ create mode 100644 makeplot.Rout
+Writing to existing file: 2019-01-15.csv
+make plot
+git push:2019-01-15 13:42:16
