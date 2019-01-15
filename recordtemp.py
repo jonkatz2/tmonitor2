@@ -51,7 +51,6 @@ except:
 while True:
     # Store groups of samples for later averaging
     samples = [0]*N*8
-    print(len(samples))
     avgvalues = [0]*8
     for j in range(N):
         # Read all the ADC channel values in a list.
@@ -61,12 +60,8 @@ while True:
             # The read_adc function will get the value of the specified channel (0-7).
             values[i] = mcp.read_adc(i)
         # Store the set of 8 values in a longer list
-        samples[j*8:j*8+7] = values
+        samples[j*8:j*8+8] = values
         time.sleep(0.5)
-    print(samples)
-    print(len(samples))
-    print(samples[0::8])
-    #print(samples[1::8])
     for k in range(8):
         tot = sum(samples[k::8])
         n = len(samples[k::8])
@@ -77,15 +72,15 @@ while True:
         st -= 273.15
         st = 9 * st/5 + 32   
         avgvalues[k] = round(st)        
-    # Print the ADC values.
+    # Log the ADC values.
     logtime = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     with open(path, "a") as f:
-        f.write('{0}, {1}, {3}, {4}, {5}, {6}, {7}, '.format(*avgvalues) + logtime + "\n")
+        f.write('{0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, '.format(*avgvalues) + logtime + "\n")
     print(logtime, ": true")
     minute = int(datetime.datetime.now().strftime("%M"))
     if minute >= 45:
         print('push to git...')
-        with open(path, "a") as log:
+        with open("log.txt", "a") as log:
             log.write("git push:" + logtime + "/n")
         os.system("git config user.email = 'jonkatz2@gmail.com'")
         os.system("git config user.name = 'jon'")
@@ -93,6 +88,6 @@ while True:
         os.system("git commit -m 'autocommit " + logtime +"'")
         os.system("git push origin master")
     nowint = int(datetime.datetime.now().strftime("%H%M%S"))
-    if nowint < 1500:
-        os.system("sudo reboot")
+#    if nowint < 1500:
+#        os.system("sudo reboot")
     
