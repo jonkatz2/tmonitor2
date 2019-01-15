@@ -4,7 +4,6 @@ today <- as.Date(Sys.time())
 todaysfile <- paste0(today, '.csv')
 dat <- read.csv(todaysfile)
 dat$Time <- as.POSIXct(dat$Time)
-plot(dat$Time, dat[,1], type='l', main=today, ylab='Degrees F', xlab=)
 
 png('plot.png', height=400, width=600)
     plot(s1 ~ Time, dat, xaxt = "n", type = "l", main=today)

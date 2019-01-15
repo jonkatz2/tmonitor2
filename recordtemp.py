@@ -102,8 +102,8 @@ while True:
         for line in log:
             pass
         last = line
-    if (nowint < 1001) and (last != "reboot: true\n"):
-        with open("log.txt", "a") as log:
-            log.write("reboot: true\n")
+    if (nowint < 1001) and (last == "git: true\n"):
+        #with open("log.txt", "a") as log:
+        #    log.write("reboot: true\n")
         os.system("sudo reboot")
     
