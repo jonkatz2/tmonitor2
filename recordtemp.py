@@ -82,7 +82,7 @@ while True:
         print('make plot')
         with open("log.txt", "a") as log:
             log.write("make plot\n")
-        os.system("R CMD batch makeplot.R")
+        os.system("R CMD BATCH --no-save --no-restore makeplot.R")
         print('push to git...')
         with open("log.txt", "a") as log:
             log.write("git push:" + logtime + "\n")
