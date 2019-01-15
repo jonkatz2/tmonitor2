@@ -85,3 +85,10 @@ Writing to existing file: 2019-01-15.csv
  
 -------------------------------------------------------
 Tue Jan 15 17:20:44 EST 2019 Start
+15 Jan 17:25:49 ntpdate[2386]: step time server 69.89.207.99 offset 22.556223 sec
+ 
+-------------------------------------------------------
+Tue Jan 15 17:25:49 EST 2019 Start
+Writing to existing file: 2019-01-15.csv
+make plot
+git push:2019-01-15 17:55:54
