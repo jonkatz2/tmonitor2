@@ -30,6 +30,7 @@ R = 10000
 B = 3950
 # Number of samples to average
 N = 20
+os.setuid(1000)
 # The data file name is the system date
 path = datetime.datetime.today().strftime("%Y-%m-%d") + ".csv"
 try:
@@ -79,6 +80,8 @@ while True:
         print('push to git...')
         with open(path, "a") as log:
             log.write("git push:" + logtime + "/n")
+        os.system("git config user.email = 'jonkatz2@gmail.com'")
+        os.system("git config user.name = 'jon'")
         os.system("git add --all")
         os.system("git commit -m 'autocommit'")
         os.system("git push origin master")
