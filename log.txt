@@ -3,3 +3,4 @@ Creating new file: 2019-01-14.csv
 Writing to existing file: 2019-01-14.csv
 Writing to existing file: 2019-01-14.csv
 Writing to existing file: 2019-01-14.csv
+Writing to existing file: 2019-01-14.csv

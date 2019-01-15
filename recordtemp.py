@@ -83,10 +83,9 @@ while True:
         os.system("git config user.email = 'jonkatz2@gmail.com'")
         os.system("git config user.name = 'jon'")
         os.system("git add --all")
-        os.system("git commit -m 'autocommit'")
+        os.system("git commit -m 'autocommit" + logtime +"'")
         os.system("git push origin master")
     nowint = int(datetime.datetime.now().strftime("%H%M%S"))
     if nowint < 1500:
-        break
         os.system("sudo reboot")
     
