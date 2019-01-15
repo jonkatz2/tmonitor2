@@ -51,15 +51,22 @@ except:
 while True:
     # Store groups of samples for later averaging
     samples = [0]*N*8
+    print(len(samples))
     avgvalues = [0]*8
     for j in range(N):
         # Read all the ADC channel values in a list.
+        # Expecting output on all 8 channels.
         values = [0]*8
         for i in range(8):
             # The read_adc function will get the value of the specified channel (0-7).
             values[i] = mcp.read_adc(i)
-        samples[j*8:j*8+9] = values
+        # Store the set of 8 values in a longer list
+        samples[j*8:j*8+7] = values
         time.sleep(0.5)
+    print(samples)
+    print(len(samples))
+    print(samples[0::8])
+    #print(samples[1::8])
     for k in range(8):
         tot = sum(samples[k::8])
         n = len(samples[k::8])
@@ -83,7 +90,7 @@ while True:
         os.system("git config user.email = 'jonkatz2@gmail.com'")
         os.system("git config user.name = 'jon'")
         os.system("git add --all")
-        os.system("git commit -m 'autocommit" + logtime +"'")
+        os.system("git commit -m 'autocommit " + logtime +"'")
         os.system("git push origin master")
     nowint = int(datetime.datetime.now().strftime("%H%M%S"))
     if nowint < 1500:
