@@ -61,7 +61,7 @@ while True:
             values[i] = mcp.read_adc(i)
         # Store the set of 8 values in a longer list
         samples[j*8:j*8+8] = values
-        time.sleep(0.5)
+        time.sleep(30)
     for k in range(8):
         tot = sum(samples[k::8])
         n = len(samples[k::8])
@@ -78,7 +78,11 @@ while True:
         f.write('{0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, '.format(*avgvalues) + logtime + "\n")
     print(logtime, ": true")
     minute = int(datetime.datetime.now().strftime("%M"))
-    if minute >= 35:
+    with open("log.txt", "r") as log:
+        for line in log:
+            pass
+        last = line
+    if (minute >= 50) and (last != "git: true\n")  :
         print('make plot')
         with open("log.txt", "a") as log:
             log.write("make plot\n")
@@ -91,7 +95,15 @@ while True:
         os.system("git add --all >> log.txt")
         os.system("git commit -m 'autocommit " + logtime +"' >> log.txt")
         os.system("git push origin master >> log.txt")
+        with open("log.txt", "a") as log:
+            log.write("git: true\n")
     nowint = int(datetime.datetime.now().strftime("%H%M%S"))
-    if nowint < 1500:
+    with open("log.txt", "r") as log:
+        for line in log:
+            pass
+        last = line
+    if (nowint < 1001) and (last != "reboot: true\n"):
+        with open("log.txt", "a") as log:
+            log.write("reboot: true\n")
         os.system("sudo reboot")
     

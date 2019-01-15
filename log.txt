@@ -31,3 +31,22 @@ git push:2019-01-15 13:42:16
  create mode 100644 plot.png
 make plot
 git push:2019-01-15 13:42:38
+[master 9473cb6] autocommit 2019-01-15 13:42:38
+ 3 files changed, 9 insertions(+), 43 deletions(-)
+ rewrite makeplot.Rout (99%)
+Writing to existing file: 2019-01-15.csv
+Writing to existing file: 2019-01-15.csv
+Writing to existing file: 2019-01-15.csv
+reboot: true
+15 Jan 14:07:01 ntpdate[2384]: step time server 64.113.44.54 offset 2955.852147 sec
+ 
+-------------------------------------------------------
+Tue Jan 15 14:07:02 EST 2019 Start
+Writing to existing file: 2019-01-15.csv
+15 Jan 14:19:06 ntpdate[2385]: step time server 138.236.128.36 offset 380.584634 sec
+ 
+-------------------------------------------------------
+Tue Jan 15 14:19:06 EST 2019 Start
+Writing to existing file: 2019-01-15.csv
+make plot
+git push:2019-01-15 14:59:12
