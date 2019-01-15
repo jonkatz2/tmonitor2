@@ -1,0 +1,5 @@
+15 Jan 12:38:40 ntpdate[2394]: step time server 65.223.27.156 offset 23.304248 sec
+ 
+-------------------------------------------------------
+Tue Jan 15 12:38:40 EST 2019 Start
+Creating new file: 2019-01-15.csv

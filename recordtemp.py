@@ -42,9 +42,9 @@ try:
     print("Existing data file: " + path)
 except:
     # If data file doesn't exist, create it and add column headings
-    with open(path, "a") as f:
+    with open(path, "a+") as f:
         f.write("s1, s2, s3, s4, s5, s6, s7, s8, Time\n")
-    with open("log.txt", "a") as log:
+    with open("log.txt", "a+") as log:
         log.write("Creating new file: " + path + "\n")
     print("New data file: " + path)
 # Main program loop
