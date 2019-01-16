@@ -97,6 +97,9 @@ while True:
         os.system("git push origin master >> log.txt")
         with open("log.txt", "a") as log:
             log.write("git: true\n")
+    else: 
+        with open("log.txt", "a") as log:
+            log.write("git: false\n")
     nowint = int(datetime.datetime.now().strftime("%H%M%S"))
     with open("log.txt", "r") as log:
         for line in log:
