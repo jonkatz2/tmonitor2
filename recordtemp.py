@@ -101,11 +101,11 @@ while True:
         with open("log.txt", "a") as log:
             log.write("git: false\n")
     nowint = int(datetime.datetime.now().strftime("%H%M%S"))
-    with open("log.txt", "r") as log:
-        for line in log:
-            pass
-        last = line
-    if (nowint < 1001) and (last == "git: true\n"):
+    #with open("log.txt", "r") as log:
+    #    for line in log:
+    #        pass
+    #    last = line
+    if (nowint < 1001):
         #with open("log.txt", "a") as log:
         #    log.write("reboot: true\n")
         os.system("sudo reboot")
