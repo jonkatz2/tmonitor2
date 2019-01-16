@@ -1,6 +1,8 @@
 #setwd('~/tmonitor2')
 options(stringsAsFactors=FALSE)
-today <- as.Date(Sys.time())
+today <- as.Date(format(Sys.time(), format="%Y-%m-%d %H:%M:%S", tz="America/New_York"))
+print(today)
+
 todaysfile <- paste0(today, '.csv')
 dat <- read.csv(todaysfile)
 dat$Time <- as.POSIXct(dat$Time)
