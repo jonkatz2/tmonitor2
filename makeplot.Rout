@@ -23,20 +23,9 @@ Type 'q()' to quit R.
 > today <- as.Date(Sys.time())
 > todaysfile <- paste0(today, '.csv')
 > dat <- read.csv(todaysfile)
-> dat$Time <- as.POSIXct(dat$Time)
-> 
-> png('plot.png', height=400, width=600)
->     plot(s1 ~ Time, dat, xaxt = "n", type = "l", main=today)
-
-(process:2408): Pango-WARNING **: error opening config file '/root/.config/pango/pangorc': Permission denied
-
->     title(paste("Last record at:", dat[nrow(dat), 'Time']), line=0.5, cex.main=0.9)
->     xax <- pretty(dat$Time)
->     axis(1, xax, format(as.POSIXct(xax, origin="1970-01-01"), "%H:%M"), cex.axis = .7, las=2)
-> dev.off()
-null device 
-          1 
-> 
-> proc.time()
-   user  system elapsed 
-   5.24    0.47    6.18 
+Error in file(file, "rt") : cannot open the connection
+Calls: read.csv -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '2019-01-16.csv': No such file or directory
+Execution halted
