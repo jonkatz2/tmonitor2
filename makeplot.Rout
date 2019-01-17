@@ -31,7 +31,7 @@ Type 'q()' to quit R.
 > png('plot.png', height=400, width=600)
 >     plot(s1 ~ Time, dat, xaxt = "n", type = "l", main=today)
 
-(process:2618): Pango-WARNING **: error opening config file '/root/.config/pango/pangorc': Permission denied
+(process:2669): Pango-WARNING **: error opening config file '/root/.config/pango/pangorc': Permission denied
 
 >     title(paste("Last record at:", dat[nrow(dat), 'Time']), line=0.5, cex.main=0.9)
 >     xax <- pretty(dat$Time)
@@ -42,4 +42,4 @@ null device
 > 
 > proc.time()
    user  system elapsed 
-  5.290   0.320   5.516 
+   5.53    0.21    5.62 
