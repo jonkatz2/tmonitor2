@@ -35,7 +35,7 @@ Type 'q()' to quit R.
 > png('plot.png', height=400, width=600)
 >     plot(s1 ~ Time, dat, xaxt = "n", type = "l", main=today, ylim=minmax)
 
-(process:2946): Pango-WARNING **: error opening config file '/root/.config/pango/pangorc': Permission denied
+(process:2992): Pango-WARNING **: error opening config file '/root/.config/pango/pangorc': Permission denied
 
 >     lines(s2 ~ Time, dat, col=bl)
 >     legend(legloc, legend=c('sensor 1', 'sensor 2'), col=c('black', bl), lty=1, bty='n')
@@ -48,4 +48,4 @@ null device
 > 
 > proc.time()
    user  system elapsed 
-  5.580   0.290   5.753 
+  5.520   0.280   5.681 
