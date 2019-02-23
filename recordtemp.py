@@ -71,7 +71,7 @@ while True:
         st = 1 / st
         st -= 273.15
         st = 9 * st/5 + 32   
-        avgvalues[k] = round(st)        
+        avgvalues[k] = round(st,1)        
     # Log the ADC values.
     logtime = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     with open(path, "a") as f:
