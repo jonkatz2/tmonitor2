@@ -13,7 +13,7 @@ avg <- mean(minmax)
 legloc <- switch(as.numeric(dat[nrow(dat), 's1'] >= avg) + 1, 'topright', 'bottomright')
 bl <- rgb(0,0,1,.4)
 
-png('plot.png', height=400, width=600)
+png('plot.png', height=500, width=800)
     plot(s1 ~ Time, dat, xaxt = "n", type = "l", main=today, ylim=minmax, ylab="Fahrenheit")
     lines(s2 ~ Time, dat, col=bl)
     if(length(timeoff)) {
