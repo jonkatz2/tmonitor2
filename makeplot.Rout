@@ -22,7 +22,7 @@ Type 'q()' to quit R.
 > options(stringsAsFactors=FALSE)
 > today <- as.Date(format(Sys.time(), format="%Y-%m-%d %H:%M:%S", tz="America/New_York"))
 > print(today)
-[1] "2019-02-27"
+[1] "2019-02-28"
 > 
 > todaysfile <- paste0(today, '.csv')
 > dat <- read.csv(todaysfile)
@@ -37,7 +37,7 @@ Type 'q()' to quit R.
 > png('plot.png', height=500, width=800)
 >     plot(s1 ~ Time, dat, xaxt = "n", type = "l", main=today, ylim=minmax, ylab="Fahrenheit")
 
-(process:3677): Pango-WARNING **: error opening config file '/root/.config/pango/pangorc': Permission denied
+(process:2416): Pango-WARNING **: error opening config file '/root/.config/pango/pangorc': Permission denied
 
 >     lines(s2 ~ Time, dat, col=bl)
 >     if(length(timeoff)) {
@@ -59,4 +59,4 @@ null device
 > 
 > proc.time()
    user  system elapsed 
-  5.660   0.380   5.928 
+  5.820   0.360   6.637 
