@@ -37,7 +37,7 @@ Type 'q()' to quit R.
 > png('plot.png', height=500, width=800)
 >     plot(s1 ~ Time, dat, xaxt = "n", type = "l", main=today, ylim=minmax, ylab="Fahrenheit")
 
-(process:3091): Pango-WARNING **: error opening config file '/root/.config/pango/pangorc': Permission denied
+(process:3140): Pango-WARNING **: error opening config file '/root/.config/pango/pangorc': Permission denied
 
 >     lines(s2 ~ Time, dat, col=bl)
 >     if(length(timeoff)) {
@@ -59,4 +59,4 @@ null device
 > 
 > proc.time()
    user  system elapsed 
-  5.740   0.290   5.932 
+  5.760   0.250   5.918 
