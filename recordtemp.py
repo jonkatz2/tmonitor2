@@ -61,7 +61,8 @@ while True:
             values[i] = mcp.read_adc(i)
         # Store the set of 8 values in a longer list
         samples[j*8:j*8+8] = values
-        time.sleep(30)
+        #time.sleep(30)
+        time.sleep(1)
     for k in range(8):
         tot = sum(samples[k::8])
         n = len(samples[k::8])
