@@ -17506,3 +17506,12 @@ git: false
 git: false
 make plot
 git push:2019-12-18 22:50:00
+[master 1d349f4] autocommit 2019-12-18 22:50:00
+ 7 files changed, 403 insertions(+), 5 deletions(-)
+ rewrite plot.png (98%)
+ create mode 100644 temperatures.csv
+ create mode 100644 upload.Rout
+git: true
+git: false
+make plot
+git push:2019-12-18 22:51:04
