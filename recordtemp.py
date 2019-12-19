@@ -86,7 +86,7 @@ while True:
             pass
         last = line
     
-    if (!minute % 10) :
+    if (minute % 10 == 0) :
 	os.sytem("R CMD BATCH --no-save --no-restore upload.R")
     if (minute >= 50) and (last != "git: true\n")  :
         #print('make plot')
