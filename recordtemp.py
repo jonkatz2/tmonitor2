@@ -32,7 +32,9 @@ B = 3950
 N = 20
 os.setuid(1000)
 # The data file name is the system date
-path = datetime.datetime.today().strftime("%Y-%m-%d") + ".csv"
+#path = datetime.datetime.today().strftime("%Y-%m-%d") + ".csv"
+
+path = "temperatures.csv"
 try:
     # Test for a data file
     f = open(path, "r")
@@ -83,31 +85,39 @@ while True:
         for line in log:
             pass
         last = line
+    
+    if (!minute % 10) :
+	os.sytem("R CMD BATCH --no-save --no-restore upload.R")
     if (minute >= 50) and (last != "git: true\n")  :
-        print('make plot')
-        with open("log.txt", "a") as log:
-            log.write("make plot\n")
-        os.system("R CMD BATCH --no-save --no-restore makeplot.R")
-        print('push to git...')
-        with open("log.txt", "a") as log:
-            log.write("git push:" + logtime + "\n")
-        os.system("git config user.email = 'jonkatz2@gmail.com'")
-        os.system("git config user.name = 'jon'")
-        os.system("git add --all >> log.txt")
-        os.system("git commit -m 'autocommit " + logtime +"' >> log.txt")
-        os.system("git push origin master >> log.txt")
-        with open("log.txt", "a") as log:
-            log.write("git: true\n")
+        #print('make plot')
+        #with open("log.txt", "a") as log:
+            #log.write("make plot\n")
+        #os.system("R CMD BATCH --no-save --no-restore makeplot.R")
+        try:
+            print('push to git...')
+            with open("log.txt", "a") as log:
+                log.write("git push:" + logtime + "\n")
+            os.system("git config user.email = 'jonkatz2@gmail.com'")
+            os.system("git config user.name = 'jon'")
+            os.system("git add --all >> log.txt")
+            os.system("git commit -m 'autocommit " + logtime +"' >> log.txt")
+            os.system("git push origin master >> log.txt")
+            with open("log.txt", "a") as log:
+                log.write("git: true\n")
+        except:
+            print('push to git failed')
+	    with open("log.txt", "a") as log:
+		log.write("push to git failed\n")    
     else: 
         with open("log.txt", "a") as log:
             log.write("git: false\n")
-    nowint = int(datetime.datetime.now().strftime("%H%M%S"))
+#    nowint = int(datetime.datetime.now().strftime("%H%M%S"))
     #with open("log.txt", "r") as log:
     #    for line in log:
     #        pass
     #    last = line
-    if (nowint < 1001):
+#    if (nowint < 1001):
         #with open("log.txt", "a") as log:
         #    log.write("reboot: true\n")
-        os.system("sudo reboot")
+#        os.system("sudo reboot")
     
