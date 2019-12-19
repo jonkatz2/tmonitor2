@@ -87,7 +87,10 @@ while True:
         last = line
     
     if (minute % 10 == 0) :
-	os.sytem("R CMD BATCH --no-save --no-restore upload.R")
+         os.system("R CMD BATCH --no-save --no-restore upload.R")
+         print("Upload to DB")
+         with open("log.txt", "a") as log:
+             log.write("Upload to database\n")
     if (minute >= 50) and (last != "git: true\n")  :
         #print('make plot')
         #with open("log.txt", "a") as log:
@@ -106,8 +109,8 @@ while True:
                 log.write("git: true\n")
         except:
             print('push to git failed')
-	    with open("log.txt", "a") as log:
-		log.write("push to git failed\n")    
+            with open("log.txt", "a") as log:
+                log.write("push to git failed\n")    
     else: 
         with open("log.txt", "a") as log:
             log.write("git: false\n")
