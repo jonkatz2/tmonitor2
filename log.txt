@@ -25530,3 +25530,9 @@ no changes added to commit (use "git add" and/or "git commit -a")
 git: true
 git: false
 git push:2019-12-20 22:54:14
+[master baf953a] autocommit 2019-12-20 22:54:14
+ 3 files changed, 26 insertions(+), 33 deletions(-)
+ rewrite makeplot.Rout (98%)
+git: true
+git: false
+git push:2019-12-20 22:55:01
