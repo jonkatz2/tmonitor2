@@ -17,17 +17,3 @@ Type 'demo()' for some demos, 'help()' for on-line help, or
 'help.start()' for an HTML browser interface to help.
 Type 'q()' to quit R.
 
-> #setwd('~/tmonitor2')
-> options(stringsAsFactors=FALSE)
-> today <- as.Date(format(Sys.time(), format="%Y-%m-%d %H:%M:%S", tz="America/New_York"))
-> print(today)
-[1] "2019-12-20"
-> 
-> todaysfile <- paste0(today, '.csv')
-> dat <- read.csv(todaysfile)
-Error in file(file, "rt") : cannot open the connection
-Calls: read.csv -> read.table -> file
-In addition: Warning message:
-In file(file, "rt") :
-  cannot open file '2019-12-20.csv': No such file or directory
-Execution halted
