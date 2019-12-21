@@ -86,7 +86,7 @@ while True:
             pass
         last = line
     
-    if (minute % 10 == 3) :
+    if (minute % 10 == 7) :
          os.system("R CMD BATCH --no-save --no-restore upload.R")
          print("Upload to DB")
          with open("log.txt", "a") as log:
