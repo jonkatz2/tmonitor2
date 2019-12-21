@@ -86,11 +86,11 @@ while True:
             pass
         last = line
     
-    if (minute % 10 == 0) :
-         os.system("R CMD BATCH --no-save --no-restore upload.R")
-         print("Upload to DB")
-         with open("log.txt", "a") as log:
-             log.write("Upload to database\n")
+    #if (minute % 10 < 5) :
+    os.system("R CMD BATCH --no-save --no-restore upload.R")
+    print("Upload to DB")
+    with open("log.txt", "a") as log:
+        log.write("Upload to database\n")
     if (minute >= 50) and (last != "git: true\n")  :
         print('make plot')
         try:
@@ -104,6 +104,7 @@ while True:
             os.system("git config user.name = 'jon'")
             os.system("git add --all >> log.txt")
             os.system("git commit -m 'autocommit " + logtime +"' >> log.txt")
+            os.system("git pull origin master")
             os.system("git push origin master >> log.txt")
             with open("log.txt", "a") as log:
                 log.write("git: true\n")

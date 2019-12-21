@@ -25700,3 +25700,35 @@ git: false
 git: false
 make plot
 git push:2019-12-20 23:58:49
+[master a3f5dd6] autocommit 2019-12-20 23:58:49
+ 5 files changed, 164 insertions(+), 20 deletions(-)
+ rewrite temperatures.csv (99%)
+ create mode 100644 upload.R.save
+git: true
+git: false
+git: false
+ 
+-------------------------------------------------------
+Sat 21 Dec 00:22:34 EST 2019 Start
+21 Dec 00:25:47 ntpdate[2572]: adjust time server 69.89.207.99 offset -0.164604 sec
+ 
+-------------------------------------------------------
+Sat 21 Dec 00:25:47 EST 2019 Start
+Writing to existing file: temperatures.csv
+21 Dec 00:28:10 ntpdate[2473]: step time server 70.91.226.201 offset 596.963092 sec
+ 
+-------------------------------------------------------
+Sat 21 Dec 00:28:10 EST 2019 Start
+Writing to existing file: temperatures.csv
+git: false
+ 
+-------------------------------------------------------
+Sat 21 Dec 00:43:57 EST 2019 Start
+21 Dec 00:46:37 ntpdate[2470]: step time server 198.60.22.240 offset 1726.651556 sec
+ 
+-------------------------------------------------------
+Sat 21 Dec 00:46:37 EST 2019 Start
+Writing to existing file: temperatures.csv
+Upload to database
+make plot
+git push:2019-12-21 00:56:40
