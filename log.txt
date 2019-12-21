@@ -25412,3 +25412,75 @@ git: false
 git: false
 Upload to database
 git push:2019-12-20 22:50:05
+[master a521123] autocommit 2019-12-20 22:50:05
+ 67 files changed, 90 insertions(+), 14831 deletions(-)
+ delete mode 100644 2019-01-15.csv
+ delete mode 100644 2019-01-16.csv
+ delete mode 100644 2019-01-17.csv
+ delete mode 100644 2019-01-18.csv
+ delete mode 100644 2019-01-19.csv
+ delete mode 100644 2019-01-20.csv
+ delete mode 100644 2019-01-21.csv
+ delete mode 100644 2019-01-22.csv
+ delete mode 100644 2019-01-23.csv
+ delete mode 100644 2019-01-24.csv
+ delete mode 100644 2019-01-25.csv
+ delete mode 100644 2019-01-26.csv
+ delete mode 100644 2019-01-27.csv
+ delete mode 100644 2019-01-28.csv
+ delete mode 100644 2019-01-29.csv
+ delete mode 100644 2019-01-30.csv
+ delete mode 100644 2019-02-23.csv
+ delete mode 100644 2019-02-24.csv
+ delete mode 100644 2019-02-25.csv
+ delete mode 100644 2019-02-26.csv
+ delete mode 100644 2019-02-27.csv
+ delete mode 100644 2019-02-28.csv
+ delete mode 100644 2019-03-01.csv
+ delete mode 100644 2019-03-02.csv
+ delete mode 100644 2019-03-03.csv
+ delete mode 100644 2019-03-04.csv
+ delete mode 100644 2019-03-05.csv
+ delete mode 100644 2019-03-06.csv
+ delete mode 100644 2019-03-07.csv
+ delete mode 100644 2019-03-08.csv
+ delete mode 100644 2019-03-09.csv
+ delete mode 100644 2019-03-10.csv
+ delete mode 100644 2019-03-11.csv
+ delete mode 100644 2019-03-12.csv
+ delete mode 100644 2019-03-13.csv
+ delete mode 100644 2019-03-14.csv
+ delete mode 100644 2019-03-15.csv
+ delete mode 100644 2019-03-16.csv
+ delete mode 100644 2019-03-17.csv
+ delete mode 100644 2019-03-18.csv
+ delete mode 100644 2019-03-19.csv
+ delete mode 100644 2019-03-20.csv
+ delete mode 100644 2019-03-21.csv
+ delete mode 100644 2019-03-22.csv
+ delete mode 100644 2019-03-23.csv
+ delete mode 100644 2019-03-24.csv
+ delete mode 100644 2019-03-25.csv
+ delete mode 100644 2019-03-26.csv
+ delete mode 100644 2019-03-27.csv
+ delete mode 100644 2019-03-28.csv
+ delete mode 100644 2019-03-29.csv
+ delete mode 100644 2019-03-30.csv
+ delete mode 100644 2019-03-31.csv
+ delete mode 100644 2019-04-01.csv
+ delete mode 100644 2019-04-02.csv
+ delete mode 100644 2019-04-03.csv
+ delete mode 100644 2019-04-04.csv
+ delete mode 100644 2019-04-05.csv
+ delete mode 100644 2019-04-06.csv
+ delete mode 100644 2019-04-07.csv
+ delete mode 100644 2019-04-08.csv
+ delete mode 100644 2019-04-09.csv
+ delete mode 100644 2019-04-10.csv
+ delete mode 100644 2019-04-11.csv
+ delete mode 100644 2019-04-12.csv
+ rewrite temperatures.csv (99%)
+git: true
+Upload to database
+git: false
+git push:2019-12-20 22:51:04
