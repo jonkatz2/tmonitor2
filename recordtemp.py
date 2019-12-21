@@ -78,7 +78,7 @@ while True:
     # Log the ADC values.
     logtime = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     with open(path, "a") as f:
-        f.write('{0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, '.format(*avgvalues) + logtime + "\n")
+        f.write('{0},{1},{2},{3},{4},{5},{6},{7}, '.format(*avgvalues) + logtime + "\n")
     print(logtime, ": true")
     minute = int(datetime.datetime.now().strftime("%M"))
     with open("log.txt", "r") as log:
@@ -86,17 +86,17 @@ while True:
             pass
         last = line
     
-    if (minute % 10 == 0) :
+    if (minute % 10 == 3) :
          os.system("R CMD BATCH --no-save --no-restore upload.R")
          print("Upload to DB")
          with open("log.txt", "a") as log:
              log.write("Upload to database\n")
     if (minute >= 50) and (last != "git: true\n")  :
-        #print('make plot')
-        #with open("log.txt", "a") as log:
-            #log.write("make plot\n")
-        #os.system("R CMD BATCH --no-save --no-restore makeplot.R")
+        print('make plot')
         try:
+            with open("log.txt", "a") as log:
+                log.write("make plot\n")
+            os.system("R CMD BATCH --no-save --no-restore makeplot.R")
             print('push to git...')
             with open("log.txt", "a") as log:
                 log.write("git push:" + logtime + "\n")
