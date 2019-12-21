@@ -1,3 +1,5 @@
+.libPaths(c("/home/pi/R/armv6l-unknown-linux-gnueabihf-library/3.6","/usr/local/lib/R/site-library","/usr/local/lib/R/library"))
+
 library(RMariaDB)
 con <- RMariaDB::dbConnect(
 	drv = MariaDB(),
@@ -13,8 +15,8 @@ print(today)
 
 dat <- read.csv('temperatures.csv')
 vals <- unlist(lapply(1:nrow(dat), function(x) { 
-    paste0("(", dat[x,"s1"], ",", dat[x,"s2"], ",", dat[x,"s3"], ",", dat[x,"s4"], ",'", dat[x,"Time"], "')")
-})
+    paste0("(NULL,", dat[x,"s1"], ",", dat[x,"s2"], ",", dat[x,"s3"], ",", dat[x,"s4"], ",'", dat[x,"Time"], "')")
+}))
 vals <- paste0(vals, collapse=",")
 r <- dbExecute(con, paste0("INSERT INTO tblTemp VALUES ", vals, ";"))
 if(r) {
