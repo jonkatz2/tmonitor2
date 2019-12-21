@@ -17,6 +17,5 @@ Type 'demo()' for some demos, 'help()' for on-line help, or
 'help.start()' for an HTML browser interface to help.
 Type 'q()' to quit R.
 
-> library(RMariaDB)
-Error in library(RMariaDB) : there is no package called ‘RMariaDB’
+
 Execution halted
