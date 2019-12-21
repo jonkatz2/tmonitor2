@@ -45,7 +45,7 @@ try:
 except:
     # If data file doesn't exist, create it and add column headings
     with open(path, "a+") as f:
-        f.write("s1, s2, s3, s4, s5, s6, s7, s8, Time\n")
+        f.write("s1,s2,s3,s4,s5,s6,s7,s8,Time\n")
     with open("log.txt", "a+") as log:
         log.write("Creating new file: " + path + "\n")
     print("New data file: " + path)
@@ -86,7 +86,7 @@ while True:
             pass
         last = line
     
-    if (minute % 10 == 7) :
+    if (minute % 10 == 0) :
          os.system("R CMD BATCH --no-save --no-restore upload.R")
          print("Upload to DB")
          with open("log.txt", "a") as log:
