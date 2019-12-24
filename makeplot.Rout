@@ -21,7 +21,7 @@ Type 'q()' to quit R.
 > options(stringsAsFactors=FALSE)
 > today <- as.Date(format(Sys.time(), format="%Y-%m-%d %H:%M:%S", tz="America/New_York"))
 > print(today)
-[1] "2019-12-23"
+[1] "2019-12-24"
 > 
 > todaysfile <- paste0(today, '.csv')
 > dat <- read.csv(todaysfile)
@@ -29,5 +29,5 @@ Error in file(file, "rt") : cannot open the connection
 Calls: read.csv -> read.table -> file
 In addition: Warning message:
 In file(file, "rt") :
-  cannot open file '2019-12-23.csv': No such file or directory
+  cannot open file '2019-12-24.csv': No such file or directory
 Execution halted
