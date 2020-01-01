@@ -28,5 +28,23 @@ Type 'q()' to quit R.
 + 	host = "decisionsr-1.cghjyqj3cj4o.us-east-1.rds.amazonaws.com",
 + 	port = 3306
 + )
-Error: Failed to connect: Unknown MySQL server host 'decisionsr-1.cghjyqj3cj4o.us-east-1.rds.amazonaws.com' (2)
-Execution halted
+> options(stringsAsFactors=FALSE)
+> today <- as.Date(format(Sys.time(), format="%Y-%m-%d %H:%M:%S", tz="America/New_York"))
+> print(today)
+[1] "2020-01-01"
+> 
+> dat <- read.csv('temperatures.csv')
+> vals <- unlist(lapply(1:nrow(dat), function(x) { 
++     paste0("(NULL,", dat[x,"s1"], ",", dat[x,"s2"], ",", dat[x,"s3"], ",", dat[x,"s4"], ",'", dat[x,"Time"], "')")
++ }))
+> vals <- paste0(vals, collapse=",")
+> r <- dbExecute(con, paste0("INSERT INTO tblTemp VALUES ", vals, ";"))
+> if(r) {
++     dat <- dat[-c(1:nrow(dat)),]
++     write.csv(dat, 'temperatures.csv', row.names=FALSE)
++ }
+> 
+> 
+> proc.time()
+   user  system elapsed 
+ 15.060   0.640  17.248 
