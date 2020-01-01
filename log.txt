@@ -29970,3 +29970,20 @@ git: false
 Upload to database
 make plot
 git push:2020-01-01 09:53:59
+[master 12e33f6] autocommit 2020-01-01 09:53:59
+ 3 files changed, 40 insertions(+), 238 deletions(-)
+ rewrite temperatures.csv (99%)
+git: true
+Upload to database
+git: false
+Upload to database
+git: false
+Upload to database
+git: false
+Upload to database
+git: false
+Upload to database
+git: false
+Upload to database
+make plot
+git push:2020-01-01 10:56:10
