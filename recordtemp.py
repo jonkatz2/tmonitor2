@@ -86,6 +86,10 @@ while True:
             pass
         last = line
     
+    response = os.system("ping -c 1 -w 2 www.google.com")
+    if (response == 1) : 
+        os.system("sudo reboot")
+    
     #if (minute % 10 < 5) :
     os.system("R CMD BATCH --no-save --no-restore upload.R")
     print("Upload to DB")
