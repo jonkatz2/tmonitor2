@@ -31,7 +31,7 @@ Type 'q()' to quit R.
 > options(stringsAsFactors=FALSE)
 > today <- as.Date(format(Sys.time(), format="%Y-%m-%d %H:%M:%S", tz="America/New_York"))
 > print(today)
-[1] "2020-02-09"
+[1] "2020-02-10"
 > 
 > dat <- read.csv('temperatures.csv')
 > vals <- unlist(lapply(1:nrow(dat), function(x) { 
@@ -47,4 +47,4 @@ Type 'q()' to quit R.
 > 
 > proc.time()
    user  system elapsed 
- 14.840   0.640  16.985 
+ 14.940   0.590  16.585 
