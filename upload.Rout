@@ -28,5 +28,5 @@ Type 'q()' to quit R.
 + 	host = "decisionsr-1.cghjyqj3cj4o.us-east-1.rds.amazonaws.com",
 + 	port = 3306
 + )
-Error: Failed to connect: Unknown MySQL server host 'decisionsr-1.cghjyqj3cj4o.us-east-1.rds.amazonaws.com' (2)
+Error: Failed to connect: Lost connection to MySQL server at 'reading authorization packet', system error: 0
 Execution halted
