@@ -47,4 +47,4 @@ Type 'q()' to quit R.
 > 
 > proc.time()
    user  system elapsed 
-  15.42    0.53   17.31 
+ 14.610   0.600  25.438 
